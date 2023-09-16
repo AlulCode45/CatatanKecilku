@@ -2,7 +2,7 @@
 ## Catatan Sederhana Berbasis Web Menggunakan React JS + Vite 📝
 
 Ini adalah proyek catatan sederhana berbasis web yang dibangun dengan menggunakan React JS dan Vite. Aplikasi ini memungkinkan pengguna untuk membuat, mengedit, dan menghapus catatan secara interaktif, dan catatan-catatan tersebut disimpan menggunakan session storage.
-![ScreenShot][https://i.ibb.co/6FvRnc6/Simple-Catatanku.png]
+![ScreenShot](https://i.ibb.co/6FvRnc6/Simple-Catatanku.png)
 
 **Author:** AlulCOde 🧑‍💻
 
