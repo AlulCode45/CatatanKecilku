@@ -58,29 +58,33 @@ export default function Archived() {
                         </div>
                         {/* Content Start */}
                         {
-                            content?.map((data, i) => (
-                                <div className="bg-white px-7 py-8 rounded-sm border hover:bg-yellow-50 mt-3" key={i}>
-                                    <h1 className='font-medium text-lg'>{data?.title}</h1>
-                                    <p className='font-light text-md mt-3'>
-                                        {data?.body}
-                                    </p>
-                                    <div className="w-full flex justify-between mt-4">
-                                        <small className='font-extralight text-gray-500'>
-                                            {data?.createdAt}
-                                        </small>
-                                        <div className="icons flex gap-3">
-                                            <GrTrash
-                                                className='hover:text-red-500 hover:cursor-pointer'
-                                                onClick={() => deleteContent(data?.id)}
-                                            />
-                                            <GrArchive
-                                                className='hover:text-orange-500 hover:cursor-pointer'
-                                                onClick={() => unarchiveContent(data?.id)}
-                                            />
+                            content ? (
+                                content?.map((data, i) => (
+                                    <div className="bg-white px-7 py-8 rounded-sm border hover:bg-yellow-50 mt-3" key={i}>
+                                        <h1 className='font-medium text-lg'>{data?.title}</h1>
+                                        <p className='font-light text-md mt-3'>
+                                            {data?.body}
+                                        </p>
+                                        <div className="w-full flex justify-between mt-4">
+                                            <small className='font-extralight text-gray-500'>
+                                                {data?.createdAt}
+                                            </small>
+                                            <div className="icons flex gap-3">
+                                                <GrTrash
+                                                    className='hover:text-red-500 hover:cursor-pointer'
+                                                    onClick={() => deleteContent(data?.id)}
+                                                />
+                                                <GrArchive
+                                                    className='hover:text-orange-500 hover:cursor-pointer'
+                                                    onClick={() => archiveContent(data?.id)}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))
+                                ))
+                            ) : (
+                                <h1 className='text-center'>Tidak ada catatan</h1>
+                            )
                         }
                     </div>
                 </main>
